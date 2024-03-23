@@ -17,8 +17,9 @@ def hbnb():
 	"""Display HBNB"""
 	return "HBNB"
 
-@app.route("/c/<text>")
+@app.route("/c/<text>", strict_slashes=False)
 def dynamic_value(text):
+	"""Display Dynamic Content"""
 	return f'C {escape(text)}'
 
 if __name__ == '__main__':
