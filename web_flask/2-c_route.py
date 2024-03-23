@@ -17,10 +17,10 @@ def hbnb():
 	"""Display HBNB"""
 	return "HBNB"
 
-@app.route("/c/<text>", strict_slashes=False)
-def dynamic_value(text):
-	"""Display Dynamic Content"""
-	return f'C {escape(text)}'
+@app.route('/c/<text>', strict_slashes=False)
+def cisfun(text):
+    """display “C ” followed by the value of the text variable"""
+    return 'C ' + text.replace('_', ' ')
 
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', port=5000)
